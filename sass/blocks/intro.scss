@@ -1,0 +1,10 @@
+.intro {
+  min-height: 100px;
+  background-size: 200px auto;
+  background-image: url("/img/intro-bg-pattern.jpg");
+}
+.intro__wrapper {
+  @include section-width;
+  @include paddings;
+  @include centers;
+}

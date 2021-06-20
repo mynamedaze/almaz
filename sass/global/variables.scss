@@ -1,0 +1,38 @@
+//display widths
+$max-mobile-width: "(max-width: 767px)";
+$max-mobile-wrapper: 540px;
+
+$mobile-width-only: "(min-width: 500px) and (max-width: 767px)";
+
+$min-tablet-width: "(min-width: 768px)";
+$max-tablet-width: "(max-width: 1299px)";
+$tablet-width-only: "(min-width: 768px) and (max-width: 1299px)";
+$max-tablet-wrapper: 960px;
+
+$min-desktop-width: "(min-width: 1300px)";
+$max-desktop-wrapper: 1300px;
+
+$min-fullhd-width: "(min-width: 1921px)";
+
+//blocks
+$padding--mobile: 18px;
+$padding--tablet: 50px;
+$padding--desktop: 80px;
+
+//text
+$color--main: rgba(63, 62, 66, 1);
+$color--alt: rgba(242, 242, 242, 1);
+$color--brown-main: rgba(193, 139, 86, 1);
+$color--brown-alt: rgba(206, 174, 142, 1);
+$color--gray-main: rgba(155, 155, 155, 1);
+$color--gray-alt: rgba(188, 187, 192, 1);
+
+$font--main:  'Roboto', Arial, sans-serif;
+$font-alt: 'dayslater', Arial, sans-serif;
+
+//backgrounds
+$bg--main: #ffffff;
+
+//links
+$link-color: #333333;
+$link-color--hover: #0d4f84;

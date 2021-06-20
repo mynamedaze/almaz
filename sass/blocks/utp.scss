@@ -1,0 +1,113 @@
+.utp {
+}
+.utp__wrapper {
+  @include paddings;
+  @include section-width;
+  @include centers;
+  padding-bottom: 30px;
+}
+.utp__list {
+  margin-top: 0;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-left: 0;
+}
+.utp__item {
+  flex-grow: 1;
+  background-color: $color--brown-main;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-weight: 500;
+  color: $color--alt;
+  text-align: center;
+  background-repeat: no-repeat;
+  @media #{$max-mobile-width} {
+    width: 47%;
+    font-size: 13px;
+    line-height: 15.5px;
+    margin-left: .5px;
+    margin-right: .5px;
+    margin-bottom: 1px;
+    padding-top: 67px;
+    padding-bottom: 23px;
+  }
+  @media #{$min-tablet-width} {
+    width: 24%;
+    font-size: 14px;
+    line-height: 18px;
+    margin-left: 1.5px;
+    margin-right: 1.5px;
+    padding-top: 95px;
+    padding-bottom: 20px;
+  }
+  @media #{$min-desktop-width} {
+    font-size: 16px;
+    line-height: 20px;
+    margin-left: 1px;
+    margin-right: 1px;
+    padding-top: 143px;
+    padding-bottom: 40px;
+  }
+  &:nth-child(1) {
+    background-image: url("/img/utp-1.svg");
+    @media #{$max-mobile-width} {
+      background-position: 50% 20px;
+      background-size: 40px auto;
+    }
+    @media #{$min-tablet-width} {
+      background-position: 50% 40px;
+      background-size: 55px auto;
+    }
+    @media #{$min-desktop-width} {
+      background-position: 50% 45px;
+      background-size: 84px auto;
+    }
+  }
+  &:nth-child(2) {
+    background-image: url("/img/utp-2.svg");
+    @media #{$max-mobile-width} {
+      background-position: 50% 25px;
+      background-size: 28px auto;
+    }
+    @media #{$min-tablet-width} {
+      background-position: 50% 40px;
+      background-size: 45px auto;
+    }
+    @media #{$min-desktop-width} {
+      background-position: 50% 60px;
+      background-size: 61px auto;
+    }
+  }
+  &:nth-child(3) {
+    background-image: url("/img/utp-3.svg");
+    background-position: 50% 25px;
+    @media #{$max-mobile-width} {
+      background-size: 39px auto;
+    }
+    @media #{$min-tablet-width} {
+      background-position: 50% 40px;
+      background-size: 52px auto;
+    }
+    @media #{$min-desktop-width} {
+      background-position: 50% 60px;
+      background-size: 70px auto;
+    }
+  }
+  &:nth-child(4) {
+    background-image: url("/img/utp-4.svg");
+    background-position: 50% 25px;
+    @media #{$max-mobile-width} {
+      background-size: 34px auto;
+    }
+    @media #{$min-tablet-width} {
+      background-position: 50% 43px;
+      background-size: 58px auto;
+    }
+    @media #{$min-desktop-width} {
+      background-position: 50% 60px;
+      background-size: 88px auto;
+    }
+  }
+}
