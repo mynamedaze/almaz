@@ -39,6 +39,7 @@
   padding-left: 0;
   @media #{$max-mobile-width} {
     margin-top: 25px;
+    margin-bottom: -30px;
   }
   @media #{$tablet-width-only} {
     max-width: 480px;
