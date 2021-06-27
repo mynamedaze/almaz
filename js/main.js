@@ -37,4 +37,18 @@ $(document).ready(function () {
             $(serviceImages3[index]).removeClass('disable');
         })
     });
+
+    $(".eq__list").owlCarousel({
+        loop: true,
+        dots: true,
+        items: 1,
+        responsive: {
+            0: {
+                nav: false
+            },
+            768: {
+                nav: true
+            }
+        }
+    });
 });

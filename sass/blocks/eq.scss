@@ -1,0 +1,304 @@
+.eq__wrapper {
+  @include paddings;
+  @include centers;
+  @include section-width;
+  @media #{$max-mobile-width} {
+    padding-top: 185px;
+  }
+  @media #{$min-tablet-width} {
+    padding-top: 110px;
+  }
+  @media #{$min-desktop-width} {
+    padding-top: 190px;
+  }
+}
+.eq__subtitle {
+  display: block;
+  @media #{$max-mobile-width} {
+    margin-top: 7px;
+  }
+  @media #{$min-tablet-width} {
+    margin-top: 2px;
+  }
+}
+.eq__title {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.eq__slider-container {
+  @media #{$max-mobile-width} {
+    margin-top: 34px;
+  }
+  @media #{$min-tablet-width} {
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+  @media #{$min-desktop-width} {
+    margin-left: 110px;
+    margin-right: 110px;
+  }
+}
+.eq__list {
+  padding-left: 0;
+  position: relative;
+  @media #{$min-tablet-width} {
+    @include centers;
+    margin-top: 0;
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    z-index: 2;
+    top: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url("/img/concrete_circle.png");
+    @media #{$max-mobile-width} {
+      left: 60%;
+      transform: translate(-50%, -50%);
+      width: 173px;
+      height: 176px;
+    }
+    @media #{$min-tablet-width} {
+      transform: translateY(-50%);
+      right: 40px;
+      width: 268px;
+      height: 268px;
+    }
+    @media #{$min-desktop-width} {
+      width: 412px;
+      height: 412px;
+      right: 100px;
+    }
+  }
+  .owl-stage-outer {
+    z-index: 3;
+  }
+}
+
+.eq__item-container {
+  @media #{$min-tablet-width} {
+    display: flex;
+  }
+}
+.eq__text-container {
+  @media #{$min-tablet-width} {
+    flex-grow: 1;
+    padding-top: 113px;
+  }
+  @media #{$min-desktop-width} {
+    padding-top: 210px;
+  }
+}
+.eq__item-title {
+  display: block;
+  font-weight: 700;
+  position: relative;
+  @media #{$max-mobile-width} {
+    font-size: 13px;
+    line-height: 17px;
+  }
+  @media #{$min-tablet-width} {
+    font-size: 18px;
+    line-height: 23.5px;
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $color--brown-main;
+    @media #{$max-mobile-width} {
+      bottom: -5px;
+    }
+    @media #{$min-tablet-width} {
+      bottom: -15px;
+    }
+    @media #{$min-desktop-width} {
+      bottom: -12px;
+    }
+  }
+}
+.eq__item-description {
+  display: block;
+  @media #{$max-mobile-width} {
+    font-size: 12px;
+    line-height: 15.6px;
+    margin-top: 12px;
+  }
+  @media #{$min-tablet-width} {
+    font-size: 16px;
+    line-height: 21px;
+    margin-top: 30px;
+  }
+  @media #{$min-desktop-width} {
+    margin-top: 28px;
+  }
+}
+.eq__img-container {
+  background-repeat: no-repeat;
+  background-position: center center;
+  @media #{$max-mobile-width} {
+    height: 300px;
+  }
+  @media #{$min-tablet-width} {
+    flex-shrink: 0;
+    width: 320px;
+    height: 460px;
+  }
+  @media #{$min-desktop-width} {
+    width: 600px;
+    height: 600px;
+  }
+}
+.eq__item--1 {
+  .eq__img-container {
+    background-image: url("/img/eq-1.png");
+    @media #{$max-mobile-width} {
+      background-size: 156px auto;
+    }
+    @media #{$min-tablet-width} {
+      background-size: 240px auto;
+    }
+    @media #{$min-desktop-width} {
+      background-size: 324px auto;
+    }
+  }
+}
+.eq__item--2 {
+  .eq__img-container {
+    background-image: url("/img/eq-2.png");
+    @media #{$max-mobile-width} {
+      background-size: 239px auto;
+    }
+    @media #{$min-tablet-width} {
+      background-size: 278px auto;
+    }
+    @media #{$min-desktop-width} {
+      background-size: 477px auto;
+    }
+  }
+}
+.eq__item--3 {
+  .eq__img-container {
+    background-image: url("/img/eq-3.png");
+    @media #{$max-mobile-width} {
+      background-size: 215px auto;
+    }
+    @media #{$min-tablet-width} {
+      background-size: 267px auto;
+    }
+    @media #{$min-desktop-width} {
+      background-size: 444px auto;
+    }
+  }
+}
+.eq__item--4 {
+  .eq__img-container {
+    background-image: url("/img/eq-4.png");
+    @media #{$max-mobile-width} {
+      background-size: 316px auto;
+    }
+    @media #{$min-tablet-width} {
+      background-size: 359px auto;
+    }
+    @media #{$min-desktop-width} {
+      background-size: 637px auto;
+    }
+  }
+}
+.eq__item--5 {
+  .eq__img-container {
+    background-image: url("/img/eq-5.png");
+    @media #{$max-mobile-width} {
+      background-size: 271px auto;
+    }
+    @media #{$min-tablet-width} {
+      background-size: 311px auto;
+    }
+    @media #{$min-desktop-width} {
+      background-size: 528px auto;
+    }
+  }
+}
+.eq__item--6 {
+  .eq__img-container {
+    background-image: url("/img/eq-6.png");
+    @media #{$max-mobile-width} {
+      background-size: 151px auto;
+    }
+    @media #{$min-tablet-width} {
+      background-size: 233px auto;
+    }
+    @media #{$min-desktop-width} {
+      background-size: 298px auto;
+    }
+  }
+}
+.eq__item--7 {
+  .eq__img-container {
+    background-image: url("/img/eq-7.png");
+    @media #{$max-mobile-width} {
+      background-size: 263px auto;
+    }
+    @media #{$min-tablet-width} {
+      background-size: 303px auto;
+    }
+    @media #{$min-desktop-width} {
+      background-size: 483px auto;
+    }
+  }
+}
+/*owl custom*/
+.eq {
+  .owl-dots {
+    @media #{$max-mobile-width} {
+      transform: translateY(-30px);
+    }
+  }
+  .owl-theme .owl-dots .owl-dot span {
+    width: 15px;
+    height: 8px;
+    border-radius: 0;
+  }
+  .owl-theme .owl-dots .owl-dot.active span {
+    background-color: $color--brown-main;
+  }
+  .owl-nav {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    z-index: 5;
+    height: 0;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50px);
+  }
+  .owl-prev,
+  .owl-next {
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: contain !important;
+    background-image: url("/img/icon_double-arrow_right.svg") !important;
+    span {
+      font-size: 0;
+    }
+    &:hover {
+      background-image: url("/img/icon_ double-arrow-hover.svg") !important;
+      background-color: transparent !important;
+    }
+  }
+  .owl-prev {
+    transform: translateX(-70px) scaleX(-1);
+  }
+  .owl-next {
+    transform: translateX(70px);
+
+  }
+}
+/*/owl custom*/
