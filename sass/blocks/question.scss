@@ -8,13 +8,25 @@
   @include section-width;
   @include paddings;
   @include centers;
+  @media #{$max-mobile-width} {
+    padding-top: 83px;
+    padding-bottom: 194px;
+  }
+  @media #{$min-tablet-width} {
+    padding-top: 115px;
+    padding-bottom: 88px;
+  }
+  @media #{$min-desktop-width} {
+    padding-top: 160px;
+    padding-bottom: 75px;
+  }
 }
 .question__container {
   @media #{$tablet-width-only} {
-    max-width: 530px;
+    padding-right: 320px;
   }
   @media #{$min-desktop-width} {
-    padding-right: 800px;
+    padding-right: 770px;
   }
 }
 .question__title {
@@ -35,15 +47,24 @@
   display: block;
   @media #{$max-mobile-width} {
     font-size: 13px;
+    line-height: 17px;
+    margin-top: 7px;
   }
   @media #{$min-tablet-width} {
     font-size: 18px;
+    line-height: 23.5px;
+    margin-top: 15px;
   }
 }
 .question__button-container {
   @media #{$max-mobile-width} {
     max-width: 288px;
     @include centers;
+    margin-top: 40px;
+  }
+  @media #{$min-tablet-width} {
+    max-width: 338px;
+    margin-top: 55px;
   }
 }
 .question__button {
