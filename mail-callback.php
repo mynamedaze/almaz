@@ -15,8 +15,8 @@ $name = trim($name);
 $phone = trim($phone);
 $time = trim($time);
 
-$mess = "Заявка с ЛСТК: \n Имя: ".$name."\n Телефон: ".$phone."\n Удобное время: ".$time;
+$mess = "Заявка с mo-ex.ru: \n Имя: ".$name."\n Телефон: ".$phone."\n Удобное время: ".$time;
 
 $message = $mess;
 $email = $mail;
-mail("crm@lstkpartner.ru", "Заявка с ЛСТК", $mess,"From: crm@lstkpartner.ru \r\n");
+mail("imdaze@yandex.ru", "Заявка с mo-ex.ru", $mess,"From: imdaze@yandex.ru \r\n");
