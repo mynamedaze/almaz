@@ -16,16 +16,16 @@
 <header class="page-header">
   <div class="page-header__wrapper">
     <a href="/" class="page-header__logo-link">
-      <img src="#" alt="MO-EX" class="page-header__logo">
+      <img src="/img/logo-header.svg" alt="MO-EX" class="page-header__logo">
     </a>
     <nav class="main-nav">
       <button class="main-nav__close-btn">close</button>
       <a href="/" class="main-nav__logo-link">
-        <img src="#" alt="MO-EX" class="main-nav__logo">
+        <img src="/img/logo-header.svg" alt="MO-EX" class="main-nav__logo">
       </a>
       <ul class="main-nav__list">
         <li class="main-nav__item">
-          <a href="#" class="main-nav__link">Преимущества</a>
+          <a href="#advantage-y" class="main-nav__link">Преимущества</a>
         </li>
         <li class="main-nav__item">
           <a href="#" class="main-nav__link">Услуги</a>
@@ -43,8 +43,8 @@
           <a href="#" class="main-nav__link">Контакты</a>
         </li>
       </ul>
-      <a href="tel:+79999999999" class="main-nav__phone-link">+79999999999</a>
-      <button class="main-nav__callback-btn">Заказать звонок</button>
+      <a href="tel:+79388669455" class="main-nav__phone-link">+7 (938) 866-94-55</a>
+      <button class="main-nav__callback-btn  callback-btn">Заказать звонок</button>
     </nav>
     <button class="page-header__burger-btn">открыть меню</button>
   </div>
@@ -56,10 +56,10 @@
       <span class="intro__description">в Краснодаре и Краснодарской крае</span>
       <div class="intro__buttons-field">
         <div class="intro__button-container">
-          <button class="intro__button  intro__button--application">Оставить заявку</button>
+          <button class="intro__button  button-brown  app-btn">Оставить заявку</button>
         </div>
         <div class="intro__button-container">
-          <button class="intro__button  intro__button--callback">Обратный звонок</button>
+          <button class="intro__button  button-black  callback-btn">Обратный звонок</button>
         </div>
       </div>
     </div>
@@ -74,7 +74,7 @@
       </ul>
     </div>
   </section>
-  <section class="advantage">
+  <section class="advantage" id="advantage-y">
     <div class="advantage__wrapper">
       <h2 class="advantage__title">Преимущества Алмазного бурения</h2>
       <span class="advantage__subtitle  subtitle">перед традиционными технологиями</span>
@@ -138,12 +138,12 @@
           <input type="text" class="master__input" name="d-name" id="master-input-name" placeholder="Ваше имя">
         </div>
         <div class="master__input-container">
-          <input type="tel" class="master__input" name="d-phone" id="master-input-phone" placeholder="+7 (999) 999-99-99">
+          <input type="tel" class="master__input  phone-input" name="d-phone" id="master-input-phone" placeholder="+7 (999) 999-99-99" required>
         </div>
         <div class="master__input-container">
           <input type="submit" class="master__submit" value="Оставить заявку">
         </div>
-        <span class="master__confid">Нажимая кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с <a href="#" class="master__confid-link">«Политикой конфиденциальности»</a></span>
+        <span class="master__confid">Нажимая кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с <a href="/confid.html" class="master__confid-link">«Политикой конфиденциальности»</a></span>
       </form>
     </div>
   </section>
@@ -354,7 +354,7 @@
         <h3 class="question__title">Остались вопросы?</h3>
         <span class="question__description">Оставьте заявку и наши менеджеры подберут оптимальное решение для вашей задачи абсолютно бесплатно!</span>
         <div class="question__button-container">
-          <button class="question__button">Оставить заявку</button>
+          <button class="question__button  app-btn">Оставить заявку</button>
         </div>
       </div>
     </div>
@@ -373,22 +373,59 @@
       </div>
       <ul class="page-footer__list">
         <li class="page-footer__item">
-          <a href="#" class="page-footer__item-link">Преимущества</a>
+          <a href="#advantage-y" class="page-footer__item-link">Преимущества</a>
+        </li>
+        <li class="page-footer__item">
           <a href="#" class="page-footer__item-link">Услуги</a>
+        </li>
+        <li class="page-footer__item">
           <a href="#" class="page-footer__item-link">Этапы работ</a>
+        </li>
+        <li class="page-footer__item">
           <a href="#" class="page-footer__item-link">Оборудование</a>
+        </li>
+        <li class="page-footer__item">
           <a href="#" class="page-footer__item-link">Наши работы</a>
         </li>
       </ul>
     </div>
     <div class="page-footer__confids">
-      <a href="#" class="page-footer__confid-link">Политика конфиденциальности</a>
+      <a href="/confid.html" class="page-footer__confid-link">Политика конфиденциальности</a>
     </div>
     <div class="page-footer__map"></div>
   </div>
 </footer>
-<article class="popup-success  popup-header">
-  <span class="popup-success__title">Успешно отправлено.</span>
+<article class="popup-default  popup-callback popup">
+  <button class="popup-default__close-btn  close-btn">закрыть</button>
+  <span class="popup-default__title">Оставьте заявку и мы <br>свяжемся с вами</span>
+  <form class="popup-default__form" id="popup-callback-form">
+    <input type="text" class="popup-default__input" id="popup-callback-input-name" name="dname" placeholder="Представьтесь, пожалуйста">
+    <input type="tel" class="popup-default__input  phone-input" id="popup-callback-input-phone" name="dphone" placeholder="+7(999)999-99-99" required>
+    <input type="text" class="popup-default__input" id="popup-callback-input-time" name="dtime" placeholder="Время удобное для звонка">
+    <input type="submit" class="popup-default__submit" value="Отправить">
+  </form>
+  <span class="popup-default__confid">Нажимая кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с <a href="/confid.html">«Политикой конфиденциальности»</a></span>
+</article>
+<article class="popup-default  popup-app popup">
+  <button class="popup-default__close-btn  close-btn">закрыть</button>
+  <span class="popup-default__title">Оставьте заявку и мы <br>свяжемся с вами</span>
+  <form class="popup-default__form" id="popup-app-form">
+    <input type="text" class="popup-default__input" id="popup-app-input-name" name="dname" placeholder="Представьтесь, пожалуйста">
+    <input type="tel" class="popup-default__input  phone-input" id="popup-app-input-phone" name="dphone" placeholder="+7(999)999-99-99" required>
+    <input type="text" class="popup-default__input" id="popup-app-input-time" name="dtime" placeholder="Время удобное для звонка">
+    <input type="submit" class="popup-default__submit" value="Отправить">
+  </form>
+  <span class="popup-default__confid">Нажимая кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с <a href="/confid.html">«Политикой конфиденциальности»</a></span>
+</article>
+<article class="popup-success  popup-success--callback  popup">
+  <button class="popup-default__close-btn  close-btn">закрыть</button>
+  <span class="popup-success__title">Спасибо!</span>
+  <span class="popup-success__description">Ваша заявка принята. В ближайшее время мы с вами свяжемся!</span>
+</article>
+<article class="popup-success  popup-success--app  popup">
+  <button class="popup-default__close-btn  close-btn">закрыть</button>
+  <span class="popup-success__title">Спасибо!</span>
+  <span class="popup-success__description">Не выключайте, пожалуйста, свой телефон. До связи):</span>
 </article>
 <div class="overlay"></div>
 <script src="js/jquery-3.5.1.min.js"></script>

@@ -1,4 +1,6 @@
 $(document).ready(function () {
+    let overlay = document.getElementsByClassName('overlay');
+
     let serviceImages1 = $('.service__item--1 .service__subimg-item');
     serviceImages1 = Array.prototype.slice.call(serviceImages1);
 
@@ -51,4 +53,109 @@ $(document).ready(function () {
             }
         }
     });
+
+    let mainNav = document.getElementsByClassName('main-nav');
+    let pageHeaderBurgerBtn = document.getElementsByClassName('page-header__burger-btn');
+    let mainNavCloseBtn = document.getElementsByClassName('main-nav__close-btn');
+
+    $(pageHeaderBurgerBtn).click(function () {
+        $(mainNav).addClass('active');
+    });
+
+    $(mainNavCloseBtn).click(function () {
+        $(mainNav).removeClass('active');
+    });
+
+    let popup = document.getElementsByClassName('popup');
+    let closeBtn = document.getElementsByClassName('close-btn');
+
+    $(closeBtn).click(function () {
+        $(popup).fadeOut(300);
+        setTimeout(function () {
+            $(overlay).fadeOut(300);
+        }, 300);
+    });
+
+    $(overlay).click(function () {
+        $(popup).fadeOut(300);
+        setTimeout(function () {
+            $(overlay).fadeOut(300);
+        }, 300);
+    });
+
+    let appBtn = document.getElementsByClassName('app-btn');
+    let popupApp = document.getElementsByClassName('popup-app');
+
+    $(appBtn).click(function () {
+        $(overlay).fadeIn(300);
+        setTimeout(function () {
+            $(popupApp).fadeIn(300);
+        }, 300);
+    });
+
+    let callbackBtn = document.getElementsByClassName('callback-btn');
+    let popupCallback = document.getElementsByClassName('popup-callback');
+
+    $(callbackBtn).click(function () {
+        $(overlay).fadeIn(300);
+        setTimeout(function () {
+            $(popupCallback).fadeIn(300);
+        }, 300);
+    });
+
+    /*Плавный скролл*/
+    $(function () {
+        $('a[href^="#"]').on('click', function (event) {
+            // отменяем стандартное действие
+            event.preventDefault();
+
+            var sc = $(this).attr("href"),
+                dn = $(sc).offset().top;
+            /*
+             * sc - в переменную заносим информацию о том, к какому блоку надо перейти
+             * dn - определяем положение блока на странице
+             */
+
+            $('html, body').animate({
+                scrollTop: dn
+            }, 1000);
+
+            /*
+             * 1000 скорость перехода в миллисекундах
+             */
+        });
+    });
+    /* */
+
+    /*phone validate*/
+    $('.phone-input').inputmask("+X (999) 999-9999", {
+        definitions: {
+            "X": {
+                validator: "[7-9]",
+            }
+        },
+        oncomplete: function(){
+            $(this).val('+7' + $(this).val().substring(2));
+        }
+    });
+    /* */
+
+    let popupCallbackForm = $('#popup-callback-form');
+
+    popupCallbackForm.submit(function (ev) {
+        $.ajax({
+            type: 'POST',
+            url: '/mail-callback.php',
+            data: popupCallbackForm.serialize(),
+            success: function (data) {
+                $('.phone-input').val('');
+                $(popupCallback).fadeOut(300);
+                setTimeout(function () {
+                    $(popupSuccessCallback).fadeIn(300);
+                }, 300);
+            }
+        });
+        ev.preventDefault();
+    });
+    /* /отправка формы с колбэка */
 });

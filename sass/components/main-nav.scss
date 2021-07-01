@@ -1,0 +1,118 @@
+.main-nav {
+  @media #{$max-mobile-width} {
+    width: 100% !important;
+  }
+  @media #{$max-tablet-width} {
+    transition: all 0.3s ease 0.2s;
+    width: 331px;
+    position: absolute;
+    right: -10000px;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 50px;
+    padding-top: 35px;
+    padding-bottom: 45px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url("/img/menu-tablet-bg.jpg");
+    height: 100vh;
+  }
+  @media #{$min-desktop-width} {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+  &.active {
+    @media #{$max-tablet-width} {
+      right: 0;
+      height: 100vh;
+    }
+  }
+}
+.main-nav__list {
+  @media #{$max-tablet-width} {
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+  @media #{$min-desktop-width} {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+.main-nav__item {
+  @media #{$max-tablet-width} {
+    margin-top: 20px;
+  }
+}
+.main-nav__logo-link {
+  @media #{$max-tablet-width} {
+    width: 105px;
+  }
+  @media #{$min-desktop-width} {
+    display: none;
+  }
+}
+.main-nav__close-btn {
+  @media #{$max-tablet-width} {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 32px;
+    right: 35px;
+    border: 0 solid transparent;
+    font-size: 0;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px 20px;
+    background-image: url("/img/close.svg");
+  }
+  @media #{$min-desktop-width} {
+    display: none;
+  }
+}
+.main-nav__link {
+  color: $color--main;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23.5px;
+  @media #{$min-desktop-width} {
+    font-weight: 700;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  &:hover {
+    color: $color--brown-main;
+  }
+}
+.main-nav__callback-btn {
+  @media #{$max-tablet-width} {
+    padding-left: 0;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $color--brown-main;
+    border: 0 solid transparent;
+    background-color: transparent;
+    margin-top: 20px;
+  }
+  @media #{$min-desktop-width} {
+    display: none;
+  }
+}
+.main-nav__phone-link {
+  font-size: 18px;
+  font-weight: 700;
+  color: $color--main;
+  @media #{$max-tablet-width} {
+    margin-top: 42px;
+  }
+  &:hover {
+    color: $color--brown-main;
+  }
+}

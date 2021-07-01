@@ -1,0 +1,100 @@
+.popup-default {
+  position: fixed;
+  z-index: 1000;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $color--main;
+  display: none;
+  @media #{$max-mobile-width} {
+    width: 320px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 84px;
+    padding-bottom: 53px;
+  }
+  @media #{$min-tablet-width} {
+    width: 618px;
+    padding-left: 102px;
+    padding-right: 102px;
+    padding-top: 80px;
+    padding-bottom: 105px;
+  }
+}
+.popup-default__close-btn {
+  position: absolute;
+  font-size: 0;
+  border: 0 solid transparent;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("/img/close-gray.svg");
+  @media #{$max-mobile-width} {
+    width: 40px;
+    height: 40px;
+    background-size: 26px auto;
+    right: 5px;
+    top: 5px;
+  }
+  @media #{$min-tablet-width} {
+    width: 70px;
+    height: 70px;
+    background-size: 50px auto;
+    right: 20px;
+    top: 20px;
+  }
+}
+.popup-default__title {
+  display: block;
+  color: $color--alt;
+  @media #{$max-mobile-width} {
+    font-size: 24px;
+    line-height: 31px;
+  }
+  @media #{$min-tablet-width} {
+    font-size: 30px;
+    line-height: 39px;
+  }
+}
+.popup-default__form {
+  @include centers;
+  @media #{$max-mobile-width} {
+    margin-top: 5px;
+  }
+  @media #{$min-tablet-width} {
+    margin-top: 0;
+  }
+}
+.popup-default__input {
+  width: 100%;
+  @include form-input;
+  margin-top: 20px;
+  font-size: 15px;
+  @media #{$max-mobile-width} {
+    height: 48px;
+  }
+}
+.popup-default__submit {
+  @include main-btn;
+  margin-top: 20px;
+  @media #{$max-mobile-width} {
+    height: 48px;
+  }
+}
+.popup-default__confid {
+  color: $color--alt;
+  display: block;
+  @media #{$max-mobile-width} {
+    font-size: 12px;
+    line-height: 15.5px;
+    margin-top: 22px;
+  }
+  @media #{$min-tablet-width} {
+    font-size: 16px;
+    line-height: 21px;
+    margin-top: 18px;
+  }
+  a {
+    color: $color--brown-main;
+  }
+}

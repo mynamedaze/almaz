@@ -7,4 +7,122 @@
   @include section-width;
   @include paddings;
   @include centers;
+  position: relative;
+  @media #{$max-mobile-width} {
+    padding-top: 102px;
+    padding-bottom: 40px;
+  }
+  @media #{$min-tablet-width} {
+    padding-top: 110px;
+    padding-bottom: 100px;
+  }
+  @media #{$min-desktop-width} {
+    padding-top: 305px;
+    padding-bottom: 290px;
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
+    background-image: url("/img/master.png");
+    @media #{$max-mobile-width} {
+      width: 340px;
+      height: 400px;
+    }
+    @media #{$min-tablet-width} {
+      width: 430px;
+      height: 550px;
+    }
+    @media #{$min-desktop-width} {
+      height: 1000px;
+      width: 815px;
+      right: -253px;
+    }
+  }
+}
+.intro__title {
+  margin-top: 0;
+  margin-bottom: 0;
+  @media #{$max-mobile-width} {
+    font-size: 35px;
+    line-height: 42px;
+  }
+  @media #{$min-tablet-width} {
+    font-size: 48px;
+    line-height: 53px;
+    padding-right: 300px;
+  }
+  @media #{$min-desktop-width} {
+    font-size: 70px;
+    line-height: 91px;
+  }
+}
+.intro__description {
+  position: relative;
+  z-index: 3;
+  display: block;
+  @media #{$max-mobile-width} {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  @media #{$min-tablet-width} {
+    font-size: 20px;
+    line-height: 26px;
+    margin-top: 5px;
+  }
+  @media #{$min-desktop-width} {
+    font-size: 30px;
+    line-height: 39px;
+  }
+}
+.intro__buttons-field {
+  position: relative;
+  z-index: 3;
+  @media #{$max-mobile-width} {
+    max-width: 170px;
+    margin-top: 180px;
+  }
+  @media #{$min-tablet-width} {
+    width: 420px;
+    display: flex;
+    margin-top: 80px;
+  }
+  @media #{$min-desktop-width} {
+    margin-top: 150px;
+  }
+  @media #{$min-desktop-width} {
+    width: 600px;
+  }
+}
+.intro__button-container {
+  @media #{$max-mobile-width} {
+    margin-top: 10px;
+  }
+  @media #{$min-tablet-width} {
+    width: 40%;
+    margin-right: 7px;
+    flex-grow: 1;
+  }
+}
+.intro__button {
+  @media #{$max-mobile-width} {
+    min-height: 40px;
+  }
+  @media #{$min-tablet-width} {
+    min-height: 53px;
+    font-size: 18px;
+  }
+  @media #{$min-desktop-width} {
+    min-height: 71px;
+    font-size: 24px;
+  }
+}
+.intro__button--callback {
+  @media #{$max-mobile-width} {
+    margin-top: 10px;
+  }
 }
