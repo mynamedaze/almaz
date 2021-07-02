@@ -140,7 +140,9 @@ $(document).ready(function () {
     });
     /* */
 
+    /* отправка формы с попап колбэка */
     let popupCallbackForm = $('#popup-callback-form');
+    let popupSuccessCallback = document.getElementsByClassName('popup-success--callback');
 
     popupCallbackForm.submit(function (ev) {
         $.ajax({
@@ -157,5 +159,45 @@ $(document).ready(function () {
         });
         ev.preventDefault();
     });
-    /* /отправка формы с колбэка */
+    /* */
+
+    /* отправка формы с попап заявки */
+    let popupAppForm = $('#popup-app-form');
+    let popupSuccessApp = document.getElementsByClassName('popup-success--app');
+
+    popupAppForm.submit(function (ev) {
+        $.ajax({
+            type: 'POST',
+            url: '/mail-app.php',
+            data: popupAppForm.serialize(),
+            success: function (data) {
+                $('.phone-input').val('');
+                $(popupAppForm).fadeOut(300);
+                setTimeout(function () {
+                    $(popupSuccessApp).fadeIn(300);
+                }, 300);
+            }
+        });
+        ev.preventDefault();
+    });
+    /* */
+
+    /*отправка формы заказать мастера бесплатно*/
+    let masterForm = $('#master-form');
+    masterForm.submit(function (ev) {
+        $.ajax({
+            type: 'POST',
+            url: '/mail-master.php',
+            data: masterForm.serialize(),
+            success: function (data) {
+                $('.phone-input').val('');
+                $(overlay).fadeIn(300);
+                setTimeout(function () {
+                    $(popupSuccessApp).fadeIn(300);
+                }, 300);
+            }
+        });
+        ev.preventDefault();
+    });
+    /* */
 });
