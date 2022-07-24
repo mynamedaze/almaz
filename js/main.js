@@ -9,6 +9,8 @@ $(document).ready(function () {
 
     serviceButtons1.forEach(function (item, index) {
         $(item).click(function () {
+            $(serviceButtons1).removeClass('active');
+            $(item).addClass('active');
             $(serviceImages1).addClass('disable');
             $(serviceImages1[index]).removeClass('disable');
         })
@@ -22,6 +24,8 @@ $(document).ready(function () {
 
     serviceButtons2.forEach(function (item, index) {
         $(item).click(function () {
+            $(serviceButtons2).removeClass('active');
+            $(item).addClass('active');
             $(serviceImages2).addClass('disable');
             $(serviceImages2[index]).removeClass('disable');
         })
@@ -35,6 +39,8 @@ $(document).ready(function () {
 
     serviceButtons3.forEach(function (item, index) {
         $(item).click(function () {
+            $(serviceButtons3).removeClass('active');
+            $(item).addClass('active');
             $(serviceImages3).addClass('disable');
             $(serviceImages3[index]).removeClass('disable');
         })
@@ -172,7 +178,7 @@ $(document).ready(function () {
             data: popupAppForm.serialize(),
             success: function (data) {
                 $('.phone-input').val('');
-                $(popupAppForm).fadeOut(300);
+                $(popupApp).fadeOut(300);
                 setTimeout(function () {
                     $(popupSuccessApp).fadeIn(300);
                 }, 300);

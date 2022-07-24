@@ -1,5 +1,5 @@
 <?php
-$name = $_POST['dname'];
+$name = $_POST['d-name'];
 $phone = $_POST['d-phone'];
 $time = $_POST['d-time'];
 
@@ -17,6 +17,11 @@ $time = trim($time);
 
 $mess = "Заявка с mo-ex.ru: \n Имя: ".$name."\n Телефон: ".$phone."\n Удобное время: ".$time;
 
-$message = $mess;
-$email = $mail;
-mail("imdaze@yandex.ru", "Заявка с mo-ex.ru", $mess,"From: imdaze@yandex.ru \r\n");
+$message = urlencode($mess);
+
+$token = "1872290864:AAElXXkBQh75STLVbCRR1-FWtNSoxnxXr2g"; //наш токен от telegram bot -а
+$chatid = "-584668341"; //ИД чата telegrm
+
+$tbot = file_get_contents("https://api.telegram.org/bot".$token."/sendMessage?chat_id=".$chatid."&text=".$message);
+
+mail("admin@mo-ex.ru", "Заявка с mo-ex.ru", $mess,"From: admin@mo-ex.ru \r\n");

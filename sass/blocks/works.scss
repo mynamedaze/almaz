@@ -44,9 +44,11 @@
 }
 .feedback__img-link {
   margin: 1px;
-  filter: grayscale(.9);
-  &:hover {
-    filter: grayscale(0);
+  @media #{$min-tablet-width} {
+    filter: grayscale(.9);
+    &:hover {
+      filter: grayscale(0);
+    }
   }
 }
 .works__item:nth-child(2) {

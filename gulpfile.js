@@ -8,7 +8,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const browserSync = require('browser-sync');
 
 function style() {
-  return gulp.src('./sass/style.scss')
+  return gulp.src('./sass/style050721.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
       overrideBrowserslist:  ['last 2 versions'],
